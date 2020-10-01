@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -9,7 +10,9 @@ int main() {
 	cout << "Введите значения: x, v, t" << endl;
 	cin >> x >> v >> t;
 
-	cout << x + v * t - g * t* t * 0.5;
+	double xt = x + v * t - g * t * t * 0.5;
+
+	cout << abs(xt - x);
 
 	return 0;
 }
