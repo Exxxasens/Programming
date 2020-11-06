@@ -39,14 +39,14 @@ def checkPos(maze, x, y):
         if maze[y][x] == "#":
             return 0
 
-        print(maze[y][x], end='')
+        print(maze[y][x], end=' ')
 
     return 0
 
 
 def findOut(maze, x, y, previous):
     top = checkPos(maze, x, y - 1)
-    left = checkPos(maze, x - 1, y)
+    left = checkPos (maze, x - 1, y)
     right = checkPos(maze, x + 1, y)
     bottom = checkPos(maze, x, y + 1)
 

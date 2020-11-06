@@ -16,7 +16,7 @@ int main() {
     int numbers[S] = {};
     std::vector <int> lastNums; // last nums for k games;
     int input;
-    int gameCounter = 0, black = 0, red = 0;;
+    int gameCounter = 0, black = 0, red = 0;
 
     do {
         std::cin >> input;
