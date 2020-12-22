@@ -8,7 +8,7 @@
 <br><br>
 <p>студента 1 курса группы ПИ-б-о-202(1)<br>
 Окатьев Олег Анатольевич<br>
-направления подготовки 09.03.02 Программная инженерия</p>
+направления подготовки 09.03.04 "Программная инженерия"</p>
 <br><br>
 <table>
 <tr><td>Научный руководитель<br> старший преподаватель кафедры<br> компьютерной инженерии и моделирования</td>
@@ -258,7 +258,12 @@ refresh_data()
 
 root.mainloop()
 ```
-### Интерфейс клиентского приложения:
-![alt text](https://sun9-22.userapi.com/impf/MWfKxkkh6QVXlRLDpL1_t9eXPU9RUHTLBXrZrQ/JjKkVeoR9NY.jpg?size=307x277&quality=96&proxy=1&sign=5887fb484b266aecb338e905cfd3e8ca)
-### Загруженный виджет
-![alt text](https://sun9-50.userapi.com/impf/tl-Pk2FIcLZzqpT8oMyJR9j9ltWs5hlvN1Y0-A/VqKuDDXaTp0.jpg?size=1918x1039&quality=96&proxy=1&sign=dea6a32b1af48b95bc099ef92ad0087b)
+![Рисунок 1 - Интерфейс клиентского приложения](https://sun9-22.userapi.com/impf/MWfKxkkh6QVXlRLDpL1_t9eXPU9RUHTLBXrZrQ/JjKkVeoR9NY.jpg?size=307x277&quality=96&proxy=1&sign=5887fb484b266aecb338e905cfd3e8ca)
+
+Рисунок 1 - Интерфейс клиентского приложения
+
+![Рисунок 2 - Загруженный виджет](https://sun9-7.userapi.com/impf/avTKtGZ2WXwTE8jek81uouEs1jNZ5L_EmU1u5g/R2oinJcigck.jpg?size=330x160&quality=96&proxy=1&sign=93327ed06aabb40010cd4cc22629ef84&type=album)
+
+Рисунок 2 - Загруженный виджет
+
+**Вывод**: В реузультате проделанной работы, я смог закрепить навыки разработки многофайловых приложений, изучил способы работы с API web-сервисов, получил представление о сетевом взаимодействии приложений, изучил процесс сериализации/десериализации данных в/из json.
