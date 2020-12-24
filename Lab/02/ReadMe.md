@@ -64,23 +64,23 @@
 
 На сервисе Яндекс.Диалоги регистрируем навык, после чего настраиваем его. Указываем имя навыка, в моем случае "Программирование тест", указываем в качестве backend'a Webhooks URL и указываем полученный с помощью ngrok URL. Далее указываем использовать хранилище данных в навыке, для того чтобы мы могли использовать сессионное состояние. Тип доступа указываем приватный, дополнительно указываем категорию, пример запросов, описание и иконку, после этого навык настроен, теперь его нужно сохранить и опубликовать.
 
-![alt text](https://sun9-43.userapi.com/impf/StzAqxlj3wS9XcilPkDSOWdUxnl5Pi2qlkkBzw/CjPAAFPwsdw.jpg?size=693x825&quality=96&proxy=1&sign=64f2a54e1d2598efa9bdda10b9ea983a&type=album)
+![alt text](./images/1.jpg)
 
 Рисунок 1 - Настройки навыка
 
-![](https://sun9-63.userapi.com/impf/sm6qm03vaE38y5fluZ8PuQnJ6PejZDoZZgmu8w/v-7nWv_XKbw.jpg?size=499x406&quality=96&proxy=1&sign=76186ee2f9f593688988f5d188133f33&type=album)
+![](./images/2.jpg)
 
 Рисунок 2 - Демонстрация работы функционала корзина
 
-![](https://sun9-67.userapi.com/impf/96YTyvrESFrXeX2PKxkpB7RJiXIxI2bG7g9bxg/BMgkYUqZ1GA.jpg?size=506x600&quality=96&proxy=1&sign=8eedffbfe6e1ee302bccfcd5c264faf5&type=album)
+![](./images/3.jpg)
 
 Рисунок 3 - Демонстрация работы функционала помощь
 
-![](https://sun9-53.userapi.com/impf/K3kkWb_CaKoKvNHyx6kLzWBY0veSsxfwDjQ3zQ/wcOUObjgb9A.jpg?size=658x284&quality=96&proxy=1&sign=e920ba12a7da73a72992040661c6a010&type=album)
+![](./images/4.jpg)
 
 Рисунок 4 - Страница управления webhook-ами
 
-![](https://sun9-39.userapi.com/impf/Wnec8iAu5eMw8Epk8HVP6mjgLnVbX5dEhLB6fg/xrga59t9nYE.jpg?size=708x230&quality=96&proxy=1&sign=e4408a5f04cdb21019f20b3d4ebec09c&type=album)
+![](./images/5.jpg)
 
 Рисунок 5 - Заполненная таблица
 
