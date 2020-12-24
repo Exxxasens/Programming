@@ -117,7 +117,7 @@ int sendRequest(std::string uri, std::string data) {
     std::string path = uri.substr(end);
 
     Client cli(host.c_str());
-    auto res = cli.Post(path.c_str(), data, "text/json");
+    auto res = cli.Post(path.c_str(), data, "application/json");
     if (res) {
         if (res->status == 200) {
             std::cout << res->body << std::endl;
