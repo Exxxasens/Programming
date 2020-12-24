@@ -48,8 +48,6 @@ def index():
         if addedItems >= 1000:
             book.save('data.xlsx')
 
-        book.save('data.xlsx')
-
         return "OK"
 
 if __name__ == "__main__":
