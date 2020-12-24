@@ -47,6 +47,7 @@ def index():
 
         if addedItems >= 1000:
             book.save('data.xlsx')
+            addedItems = 0
 
         return "OK"
 
