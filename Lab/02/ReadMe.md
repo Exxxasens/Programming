@@ -74,15 +74,15 @@
 
 ![](https://sun9-67.userapi.com/impf/96YTyvrESFrXeX2PKxkpB7RJiXIxI2bG7g9bxg/BMgkYUqZ1GA.jpg?size=506x600&quality=96&proxy=1&sign=8eedffbfe6e1ee302bccfcd5c264faf5&type=album)
 
-Рисунок 2 - Демонстрация работы функционала помощь
+Рисунок 3 - Демонстрация работы функционала помощь
 
 ![](https://sun9-53.userapi.com/impf/K3kkWb_CaKoKvNHyx6kLzWBY0veSsxfwDjQ3zQ/wcOUObjgb9A.jpg?size=658x284&quality=96&proxy=1&sign=e920ba12a7da73a72992040661c6a010&type=album)
 
-Рисунок 3 - Страница управления webhook-ами
+Рисунок 4 - Страница управления webhook-ами
 
 ![](https://sun9-39.userapi.com/impf/Wnec8iAu5eMw8Epk8HVP6mjgLnVbX5dEhLB6fg/xrga59t9nYE.jpg?size=708x230&quality=96&proxy=1&sign=e4408a5f04cdb21019f20b3d4ebec09c&type=album)
 
-Рисунок 4 - Заполненная таблица
+Рисунок 5 - Заполненная таблица
 
 ### Исходный код серверного приложения:
 ```c++
