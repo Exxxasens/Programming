@@ -16,6 +16,30 @@ int getMark() {
     return rand() % 4 + 2;
 }
 
+
+
+std::ostream& operator <<(std::ostream& os, Student& st) {
+
+    int math = st.exams["mathematics"];
+    int phys = st.exams["physics"];
+    int hist = st.exams["history"];
+    int prog = st.exams["programming"];
+
+    os << "+-----------------+-------+------+------+------+------+" << std::endl;
+    os << "| Name            | Group | Math | Phys | Hist | Prog |" << std::endl;
+    os << "+-----------------+-------+------+------+------+------+" << std::endl;
+    
+    os << "| ";
+    os.width(15); os << std::left << st.name;
+    os << " |  " << st.group << "    | " << math << "    | " << phys << "    | " << hist << "    | " << prog << "    |" << std::endl;
+    
+    os << "+-----------------+-------+------+------+------+------+" << std::endl;
+
+    return os;
+}
+
+
+
 void fillData(std::vector<Student>& list) {
 
     std::vector<std::string> people = {
@@ -46,7 +70,6 @@ void fillData(std::vector<Student>& list) {
 }
 
 int main() {
-
     setlocale(LC_ALL, "Russian");
 
     srand(time(NULL));
@@ -56,10 +79,7 @@ int main() {
 
     std::cout << "struct size: " << students.size() << std::endl;
 
-    for (int i = 0; i < students.size(); i++) {
-        std::cout << "name: " << students[i].name << std::endl;
-        std::cout << students[i].exams["mathematics"] << std::endl;
-    }
+    std::cout << students[3];
 
     int m;
 
