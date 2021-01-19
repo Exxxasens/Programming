@@ -29,11 +29,9 @@ selectedCellBg = ImageTk.PhotoImage(cell_img.crop((1, 69, 67, 135)))
 
 def endGame():
     global isGameEnd
-    global score
 
     isGameEnd = True
     endGameLabel.configure(text="Игра окончена")
-    score = 0
 
 
 def countEmptyCells():
@@ -190,43 +188,33 @@ def cleanCells():
             bottom = True
             diagonal = True
 
-            rightCounter = 0
-            bottomCounter = 0
-            diagonalCounter = 0
-
             counter = 1
 
-            while right or bottom or diagonal:
+            while counter < 5:
 
                 if not (right and
                         isSafe(i, j + counter, matrix) and
                         matrix[i][j + counter].filledColor and
                         cellColor == matrix[i][j + counter].filledColor):
                     right = False
-                else:
-                    rightCounter = counter + 1
 
                 if not (bottom and
                         isSafe(i + counter, j, matrix) and
                         matrix[i + counter][j].filledColor and
                         cellColor == matrix[i + counter][j].filledColor):
                     bottom = False
-                else:
-                    bottomCounter = counter + 1
 
                 if not (diagonal and isSafe(i + counter, j + counter, matrix) and matrix[i + counter][
                     j + counter].filledColor
                         and cellColor == matrix[i + counter][j + counter].filledColor):
                     diagonal = False
-                else:
-                    diagonalCounter = counter + 1
 
                 if not right and not bottom and not diagonal:
                     break
 
                 counter += 1
 
-            if rightCounter >= 5:
+            if counter == 5 and right:
 
                 for k in range(counter):
                     c = matrix[i][j + k]
@@ -234,9 +222,9 @@ def cleanCells():
                     c.filledColor = None
                     setDefaultBg(c)
 
-                addScore(rightCounter * 2)
+                addScore(10)
 
-            if bottomCounter >= 5:
+            elif counter == 5 and bottom:
 
                 for k in range(counter):
                     c = matrix[i + k][j]
@@ -244,15 +232,15 @@ def cleanCells():
                     c.filledColor = None
                     setDefaultBg(c)
 
-                addScore(bottomCounter * 2)
+                addScore(10)
 
-            if diagonalCounter >= 5:
+            elif counter and diagonal:
                 for k in range(counter):
                     c = matrix[i + k][j + k]
                     c.selected = False
                     c.filledColor = None
                     setDefaultBg(c)
-                addScore(diagonalCounter * 2)
+                addScore(10)
 
     if countEmptyCells() == 0:
         endGame()
