@@ -188,11 +188,15 @@ def cleanCells():
 
             right = True
             bottom = True
+            diagonal = True
+
             rightCounter = 0
             bottomCounter = 0
+            diagonalCounter = 0
+
             counter = 1
 
-            while right or bottom:
+            while right or bottom or diagonal:
 
                 if not (right and
                         isSafe(i, j + counter, matrix) and
@@ -210,7 +214,14 @@ def cleanCells():
                 else:
                     bottomCounter = counter + 1
 
-                if not right and not bottom:
+                if not (diagonal and isSafe(i + counter, j + counter, matrix) and matrix[i + counter][
+                    j + counter].filledColor
+                        and cellColor == matrix[i + counter][j + counter].filledColor):
+                    diagonal = False
+                else:
+                    diagonalCounter = counter + 1
+
+                if not right and not bottom and not diagonal:
                     break
 
                 counter += 1
@@ -234,6 +245,15 @@ def cleanCells():
                     setDefaultBg(c)
 
                 addScore(bottomCounter * 2)
+
+            if diagonalCounter >= 5:
+                for k in range(counter):
+                    c = matrix[i + k][j + k]
+                    c.selected = False
+                    c.filledColor = None
+                    setDefaultBg(c)
+                addScore(diagonalCounter * 2)
+
     if countEmptyCells() == 0:
         endGame()
         return
