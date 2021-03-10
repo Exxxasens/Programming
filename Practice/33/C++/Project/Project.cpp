@@ -1,22 +1,19 @@
-#include <iostream>
+﻿#include <iostream>
 
-void create(int * pointer, int length, int start, int step) {
+int* create(int length, int first, int step) {
+    int* array = new int[length];
+
     for (int i = 0; i < length; i++) {
-         pointer[i] = start + (step * i);
+        array[i] = first + i * step;
     }
+    return array;
 }
 
-int * destroy(int * pointer) {
-    delete[] pointer;
-    pointer = nullptr;
-    return pointer;
-}
-
-int * print(int * array, int length) {
+int* printArray(int* array, int length) {
     std::cout << "[";
     for (int i = 0; i < length; i++) {
         std::cout << array[i];
-        if (i < length-1) {
+        if (i < length - 1) {
             std::cout << ", ";
         }
     }
@@ -24,7 +21,7 @@ int * print(int * array, int length) {
     return array;
 }
 
-int * sort(int * array, int length) {
+int* sort(int* array, int length) {
     int key, j, i;
     for (i = 1; i < length; i++) {
         key = array[i];
@@ -38,22 +35,22 @@ int * sort(int * array, int length) {
     return array;
 }
 
-int main() {
-    
-    int length, start, step;
+int main(int argc, const char* argv[]) {
+    setlocale(LC_ALL, "Rus");
 
+    int l, f, s;
     std::cout << "Введите длину массива: ";
-    std::cin >> length;
+    std::cin >> l;
     std::cout << "Введите начальное значение: ";
-    std::cin >> start;
+    std::cin >> f;
     std::cout << "Введите шаг: ";
-    std::cin >> step;
-    
-    int * array = new int[length];
-    
-    create(array, length, start, step);
-    sort(array, length);
-    destroy(array);
-    
+    std::cin >> s;
+
+    auto array = create(l, f, s);
+    sort(array, l);
+    printArray(array, l);
+
+    delete[] array;
+
     return 0;
 }

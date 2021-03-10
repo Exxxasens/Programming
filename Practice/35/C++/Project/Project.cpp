@@ -1,8 +1,8 @@
-#include <iostream>
+﻿#include <iostream>
 #include <typeinfo>
 
 struct IntArray {
-    int * data;
+    int* data;
     int size;
 };
 
@@ -20,8 +20,8 @@ void destroy(IntArray* arr);
 void destroy(IntArray& arr);
 
 void create(IntArray* arr, int size) {
-    arr -> data = new int[size];
-    arr -> size = size;
+    arr->data = new int[size];
+    arr->size = size;
 }
 
 void create(IntArray& arr, int size) {
@@ -37,7 +37,7 @@ void isSafe(IntArray arr, int index) {
 
 int get(IntArray* arr, int index) {
     isSafe(*arr, index);
-    return arr -> data[index];
+    return arr->data[index];
 }
 
 int get(IntArray& arr, int index) {
@@ -46,7 +46,7 @@ int get(IntArray& arr, int index) {
 
 void set(IntArray* arr, int index, int value) {
     isSafe(*arr, index);
-    arr -> data[index] = value;
+    arr->data[index] = value;
 }
 
 void set(IntArray& arr, int index, int value) {
@@ -55,9 +55,9 @@ void set(IntArray& arr, int index, int value) {
 
 void print(IntArray* arr) {
     std::cout << "[";
-    for (int i = 0; i < arr -> size; i++) {
-        std::cout << arr -> data[i];
-        if (i < arr -> size-1) {
+    for (int i = 0; i < arr->size; i++) {
+        std::cout << arr->data[i];
+        if (i < arr->size - 1) {
             std::cout << ", ";
         }
     }
@@ -72,14 +72,15 @@ void resize(IntArray* arr, int newSize) {
     auto newArray = new int[newSize];
     for (int i = 0; i < newSize; i++) {
         if (arr->size > i) {
-            newArray[i] = arr -> data[i];
-        } else {
+            newArray[i] = arr->data[i];
+        }
+        else {
             newArray[i] = 0;
         }
     }
     destroy(arr);
-    arr -> data = newArray;
-    arr -> size = newSize;
+    arr->data = newArray;
+    arr->size = newSize;
 }
 
 void resize(IntArray& arr, int newSize) {
@@ -87,7 +88,10 @@ void resize(IntArray& arr, int newSize) {
 }
 
 void destroy(IntArray* arr) {
-    delete[] arr->data;
+    if (arr->data != nullptr) {
+        delete[] arr->data;
+        arr->data = nullptr;
+    }
 }
 
 void destroy(IntArray& arr) {
@@ -101,13 +105,15 @@ int main() {
     create(array, 30);
 
     for (int i = 0; i < array.size; i++)
-        set(array, i, i+1);
-    
+        set(array, i, i + 1);
+
     print(array);  // print array with 30 elements
-    resize(array, 10000000); // resize array to 50 elements
+    resize(array, 50); // resize array to 50 elements
     print(array); // print array with 50 elements
     resize(array, 10); // resize array to 10 elements
     print(array); // print array with 10 elements
-    
+
+    destroy(array);
+
     return 0;
 }
