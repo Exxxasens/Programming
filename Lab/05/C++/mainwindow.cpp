@@ -95,7 +95,7 @@ void MainWindow::encodeMsg()
                 image.setPixel(x, y, (image.pixel(x, y) & ~0x000001) | shift);
         }
 
-       ui->label->setText("Сообщение добавлено в картинку!");
+       ui->label->setText("Сообщение успешно добавлено в картинку!");
 
 }
 
@@ -144,7 +144,6 @@ void MainWindow::decodeMsg()
         int stop2 = (index2 + all_size) * 8;
 
 
-
         for (int i = index2 * 8; i < stop2; ++i) {
             temp2 = (temp2 << 1) | getBit(image, i);
 
@@ -154,11 +153,10 @@ void MainWindow::decodeMsg()
             }
         }
 
-
         QString text = QString::fromUtf8(vector_byte2);
 
         ui->plainTextEdit->setPlainText(text);
-        ui->label->setText(QString("Присутствует сообщение длиной %1 байт").arg(image_size-bytes_size));
+        ui->label->setText(QString("Сообщение декодировано"));
 
 }
 
